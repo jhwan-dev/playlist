@@ -1,39 +1,136 @@
 <!doctype html>
 <html>
 <head>
-  <title>Luxxy</title>
+  <title>Luxxy DJ MixSet</title>
   <meta charset="utf-8">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 80px;
+      gap: 30px;
+    }
+
+    .header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+      color: white;
+    }
+
+    .header-description {
+      color: rgb(198, 198, 198);
+      font-size: 15px;
+      margin-top: 10px;
+    }
+
+    .tracklist {
+      padding: 30px 40px;
+      max-width: 800px;   /* 너무 길어지지 않도록 */
+      margin: -10px;
+      text-align: left;
+    }
+
+    .tracklist ol {
+      list-style: none;
+      counter-reset: track;
+      padding-left: 0;
+      margin: -5px;
+    }
+
+    .tracklist li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      counter-increment: track;
+    }
+
+    .tracklist li::before {
+      content: counter(track) " "; /* 점 없이 숫자만 표시 */
+      color: #888;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: start;
+      width: 20px;
+      display: inline-block;
+    }
+
+    .tracklist img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .track-title {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
 </head>
 <body>
-  <h1><a href="index.html">PlayList</a></h1>
-  
-  <ol>
-    <li><a href="dj mixset.html">Luxxy DJ MixSet</a></li>
-    <li><a href="sm demo.html">SM Demo reference</a></li>
-    <li><a href="future funk.html">Future Funk</a></li>
-  </ol>
 
-  <h2>Luxxy DJ MixSet</h2>
-
-  <div style="margin-top:10px;">
-    <a href="https://youtu.be/xcb2R-WpxVg?si=U2WUNEeT7H6yHX1r" target="_blank" title="Unlock It">
-      <img src="https://lh3.googleusercontent.com/TWIOua7ceKgfZ0PFQBp0T35p513Xji40ujBgC5i4MfPH9j0NvAuBPVNJ9h4r5LJBCnnP-EQ40ECxOqOA=w544-h544-l90-rj" alt="Charli XCX - Unlock It" style="max-width: 150px; height: auto;">
-    </a>
-    <h4>Charli XCX - Unlock It (feat. Kim Petras and Jay Park)</h4>
+  <div class="header">
+    <img src="https://images.unsplash.com/photo-1528991281749-0092cfc77c6d?q=100&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0" alt="DJ MixSet Thumbnail">
+    <div class="header-text">
+      <h1>Luxxy DJ MixSet</h1>
+      <div class="header-description">Luxxy의 트렌디한 셀렉션으로 구성된 믹스셋! EDM, 힙합, 팝 등 다양한 장르가 포함되어 있어요.</div>
+    </div>
   </div>
 
-  <div style="margin-top:10px;">
-    <a href="https://www.youtube.com/watch?v=7z25ZZ3DHds&list=RD7z25ZZ3DHds&start_radio=1" target="_blank" title="Rumble">
-      <img src="https://lh3.googleusercontent.com/v0TXS3-mkqU43syko0WtUA5836jrlXHl2bpx2BwNGMPXhW-172lptuu6aULqoRJtaDoiveoz6gC8ZmSWkw=w544-h544-l90-rj" alt="Skrillex, Fred again.. & Flowdan - Rumble" style="max-width: 150px; height: auto;">
-    </a>
-    <h4>Skrillex, Fred again.. & Flowdan - Rumble</h4>
-  </div>
+  <div class="tracklist">
+    <ol>
 
-  <div style="margin-top:10px;">
-    <a href="https://youtu.be/MZV0CIFQbbE?si=2XsWciH9X7ShKwuR" target="_blank" title="Players">
-      <img src="https://lh3.googleusercontent.com/QGFmMMoDjU6WTtcjlxA3n66Jx91iUNjr6T66CPfBRcFOwG9sRo_BSi1BvS3YUNhqZSxNoGlkma0vXzQL=w544-h544-l90-rj" alt="Coi Leray - Players" style="max-width: 150px; height: auto;">
-    </a>
-    <h4>Coi Leray - Players</h4>
+      <li>
+        <a href="https://youtu.be/xcb2R-WpxVg" target="_blank">
+          <img src="https://lh3.googleusercontent.com/TWIOua7ceKgfZ0PFQBp0T35p513Xji40ujBgC5i4MfPH9j0NvAuBPVNJ9h4r5LJBCnnP-EQ40ECxOqOA=w544-h544-l90-rj" alt="Unlock It">
+        </a>
+        <div class="track-title">Charli XCX - Unlock It (feat. Kim Petras & Jay Park)</div>
+      </li>
+
+      <li>
+        <a href="https://www.youtube.com/watch?v=7z25ZZ3DHds" target="_blank">
+          <img src="https://lh3.googleusercontent.com/v0TXS3-mkqU43syko0WtUA5836jrlXHl2bpx2BwNGMPXhW-172lptuu6aULqoRJtaDoiveoz6gC8ZmSWkw=w544-h544-l90-rj" alt="Rumble">
+        </a>
+        <div class="track-title">Skrillex, Fred again.. & Flowdan - Rumble</div>
+      </li>
+
+      <li>
+        <a href="https://youtu.be/MZV0CIFQbbE" target="_blank">
+          <img src="https://lh3.googleusercontent.com/QGFmMMoDjU6WTtcjlxA3n66Jx91iUNjr6T66CPfBRcFOwG9sRo_BSi1BvS3YUNhqZSxNoGlkma0vXzQL=w544-h544-l90-rj" alt="Players">
+        </a>
+        <div class="track-title">Coi Leray - Players</div>
+      </li>
+
+    </ol>
   </div>
 
 </body>

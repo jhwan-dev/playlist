@@ -1,39 +1,136 @@
 <!doctype html>
 <html>
 <head>
-  <title>Playlist - SM Demo reference</title>
+  <title>SM Demo Reference</title>
   <meta charset="utf-8">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 80px;
+      gap: 30px;
+    }
+
+    .header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      margin: 0;
+      color: white;
+    }
+
+    .header-description {
+      color: rgb(198, 198, 198);
+      font-size: 15px;
+      margin-top: 10px;
+    }
+
+    .tracklist {
+      padding: 30px 40px;
+      max-width: 800px;
+      margin: 0;
+      text-align: left;
+    }
+
+    .tracklist ol {
+      list-style: none;
+      counter-reset: track;
+      padding-left: 0;
+      margin: -5px;
+    }
+
+    .tracklist li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      counter-increment: track;
+    }
+
+    .tracklist li::before {
+      content: counter(track) " ";
+      color: #888;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: start;
+      width: 20px;
+      display: inline-block;
+    }
+
+    .tracklist img {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .track-title {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
 </head>
 <body>
-  <h1><a href="index.html">PlayList</a></h1>
 
-  <ol>
-    <li><a href="dj mixset.html">Luxxy DJ MixSet</a></li>
-    <li><a href="sm demo.html">SM Demo reference</a></li>
-    <li><a href="future funk.html">Future Funk</a></li>
-  </ol>
-
-  <h2>SM Demo reference</h2>
-
-  <div style="margin-top:10px;">
-    <a href="https://youtu.be/N4AamvslOQc?si=RTxYfAUwCDmLUyTS" target="_blank" title="Crush">
-      <img src="https://lh3.googleusercontent.com/Uhox5FsWwDFq6fANNi-v4rRYtz22exGU4QnXN-Gap0pMwGXhxW2Ew4DyFtfO69BLWVZGgGOtSgHiQfyESA=w544-h544-l90-rj" alt="DUCKWRTH - Crush" style="max-width: 150px; height: auto;">
-    </a>
-    <h4>DUCKWRTH - Crush</h4>
+  <div class="header">
+    <img src="https://images.unsplash.com/photo-1751875313483-5b0e2b959224?q=100&w=1474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="SM Entertainment">
+    <div class="header-text">
+      <h1>SM Demo Reference</h1>
+      <div class="header-description">SM Entertainment 노래를 좋아한다면</div>
+    </div>
   </div>
 
-  <div style="margin-top:10px;">
-    <a href="https://youtu.be/eyKMMWQ7Blw?si=Ovwma0zEybbtmBQY" target="_blank" title="Your Soul">
-      <img src="https://lh3.googleusercontent.com/1QSBD0Grm_kOKtmnKjIP0HVxRLr4X_fnKIbAtHANdb5AYVFSsE75I9tavee3nUH7Z81Vk7SGY_1poXY=w544-h544-l90-rj" alt="Kyle Dion - Your Soul" style="max-width: 150px; height: auto;">
-    </a>
-    <h4>Kyle Dion - Your Soul</h4>
-  </div>
+  <div class="tracklist">
+    <ol>
 
-  <div style="margin-top:10px;">
-    <a href="https://youtu.be/7G5nHNSMibo?si=d8pEejhK3ISGjgwG" target="_blank" title="bAd">
-      <img src="https://lh3.googleusercontent.com/4GHcnXexoV7BJFpjPc_wVwkP5MAW1kCL1qpFSnsVQa5Jj59XNYpbAM0YT_Rqk9d7qYBPfsD5Qq5Cwws=w544-h544-l90-rj" alt="THE BOYZ - bAd" style="max-width: 150px; height: auto;">
-    </a>
-    <h4>THE BOYZ - bAd</h4>
+      <li>
+        <a href="https://youtu.be/N4AamvslOQc?si=RTxYfAUwCDmLUyTS" target="_blank">
+          <img src="https://lh3.googleusercontent.com/Uhox5FsWwDFq6fANNi-v4rRYtz22exGU4QnXN-Gap0pMwGXhxW2Ew4DyFtfO69BLWVZGgGOtSgHiQfyESA=w544-h544-l90-rj" alt="DUCKWRTH - Crush">
+        </a>
+        <div class="track-title">DUCKWRTH - Crush</div>
+      </li>
+
+      <li>
+        <a href="https://youtu.be/eyKMMWQ7Blw?si=Ovwma0zEybbtmBQY" target="_blank">
+          <img src="https://lh3.googleusercontent.com/1QSBD0Grm_kOKtmnKjIP0HVxRLr4X_fnKIbAtHANdb5AYVFSsE75I9tavee3nUH7Z81Vk7SGY_1poXY=w544-h544-l90-rj" alt="Kyle Dion - Your Soul">
+        </a>
+        <div class="track-title">Kyle Dion - Your Soul</div>
+      </li>
+
+      <li>
+        <a href="https://youtu.be/7G5nHNSMibo?si=d8pEejhK3ISGjgwG" target="_blank">
+          <img src="https://lh3.googleusercontent.com/4GHcnXexoV7BJFpjPc_wVwkP5MAW1kCL1qpFSnsVQa5Jj59XNYpbAM0YT_Rqk9d7qYBPfsD5Qq5Cwws=w544-h544-l90-rj" alt="THE BOYZ - bAd">
+        </a>
+        <div class="track-title">THE BOYZ - bAd</div>
+      </li>
+
+    </ol>
   </div>
 
 </body>

@@ -1,23 +1,105 @@
 <!doctype html>
 <html>
 <head>
-<title>PlayList</title>
-<meta charset="utf-8">
+  <title>Luxxy Playlist</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 50px;
+      font-weight: 900;
+      margin-bottom: 40px;
+      color: rgb(105, 214, 105);
+    }
+
+    h2 {
+      font-weight: normal;
+      color: #ccc;
+      margin-bottom: 40px;
+      text-align: left;
+      margin-left: 10px;
+    }
+
+    .playlist-container {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .playlist-card {
+      width: 170px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      padding: 5px;
+      transition: transform 0.2s ease;
+    }
+
+    .playlist-card:hover {
+      transform: scale(1.05);
+    }
+
+    .playlist-card img {
+      width: 160px;
+      height: 160px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .playlist-card a {
+      text-decoration: none;
+      color: rgb(198, 198, 198);
+      display: block;
+      margin-top: 10px;
+      font-weight: lighter;
+    }
+    .playlist-card span {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+
+  </style>
 </head>
 <body>
-    <h1><a href="index.html">PlayList</a></h1>
-    <ul>
-    <li>wogleam</li>
-    <li>luxxy</li>
-    </ul>
 
-<h2>Share Your Feelings And Enjoy It!</h2>
+  <h1>Playlist</h1>
+  <h2>Today's Playlist</h2>
 
-<ol>
-    <li><a href="dj mixset.html">Luxxy DJ MixSet</a></li>
-    <li><a href="sm demo.html">SM Demo reference</a></li>
-    <li><a href="future funk.html">Future Funk</a></li>
-</ol>
+  <div class="playlist-container">
+
+    <div class="playlist-card">
+        <a href="dj mixset.html">
+        <img src="https://images.unsplash.com/photo-1528991281749-0092cfc77c6d?q=100&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="DJ MixSet Thumbnail">
+        <span>Luxxy DJ MixSet</span>
+      </a>
+    </div>
+
+    <div class="playlist-card">
+      <a href="sm demo.html">
+        <img src="https://images.unsplash.com/photo-1751875313483-5b0e2b959224?q=100&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="SM Demo Thumbnail">
+        <span>SM Demo Reference</span>
+      </a>
+    </div>
+
+    <div class="playlist-card">
+      <a href="future funk.html">
+        <img src="https://images.unsplash.com/photo-1602123162521-d2735591a3ba?q=100&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Future Funk Thumbnail">
+        <span>Future Funk</span>
+      </a>
+    </div>
+
+  </div>
 
 </body>
 </html>
